@@ -1,0 +1,193 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,200);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,200,100);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100);
+
+@mixin card ($level) {
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.3);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.3);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.3);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.3);
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin absolute-cover {
+    position: absolute;
+    top: 0px; bottom: 0px; right: 0px; left: 0px;
+}
+
+$bg-color: #2D2E40;
+$main-color: #413E59;
+$accent-color: hsl(213, 25%, 50%);
+
+hsl(236, 17%, 21%)
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 70px 80px;
+    background: $bg-color;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+
+.content {
+    @include card(5);
+    width: 100%;
+    max-width: 800px;
+    border-radius: 0px;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    // padding-bottom: 80px;
+    background: #DDD;
+
+    .slide.cover {
+        height: 450px;
+        background: $main-color;
+        color: white;
+        padding: 30px;
+        @include flex-center;
+        flex-direction: column;
+        position: relative;
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .name {
+            font-family: 'Raleway', helvetica, arial, sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+
+    .slide {
+        position: relative;
+        padding: 60px 40px;
+        // background: #222;
+
+        &.odd {
+            background: #333;
+        }
+
+        &.odd .title {
+            color: white;
+        }
+
+        .title {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Montserrat', helvetica, arial, sans-serif;
+            font-size: 40px;
+            margin-bottom: 30px;
+
+            .line {
+                border-top: 1px solid #888;
+                height: 8px;
+                margin: 0 auto;
+
+                &.long {
+                    width: 100%;
+                }
+                &.short {
+                    width: 20%;
+                }
+            }
+        }
+
+        .float {
+            @include card(2);
+            position: absolute;
+            // left: -120px;
+            right: 52%;
+            // top: 200px;
+            border-radius: 2px;
+            overflow: hidden;
+            background: hsl(136, 50%, 43%);
+            background: #EFEFEF;
+            background: #0D0D0D;
+            padding: 10px;
+
+            img {
+                width: 500px;
+                height: auto;
+            }
+        }
+
+        &.odd .float {
+            right: initial;
+            left: 52%;
+        }
+
+        .description {
+            margin-left: 50%;
+            padding: 20px;
+            padding-top: 0px;
+            font-size: 18px;
+            font-family: 'Roboto';
+            // font-weight: 300;
+            // font-weight: 200;
+
+            .process {
+                margin-bottom: 12px;
+            }
+        }
+        &.odd .description {
+            margin-left: 0px;
+            margin-right: 50%;
+            color: white;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+.filter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 100% 100%;
+        border-color: transparent transparent rgba(black, 0.1) transparent;
+    }
+}
