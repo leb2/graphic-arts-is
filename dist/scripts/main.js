@@ -1,0 +1,1 @@
+"use strict";!function(){skrollr.init({smoothScrolling:!1,forceHeight:!1}),$(".filter").each(function(){var t=$(this).outerWidth(),i=$(this).outerHeight();$(this).children(".triangle").css({"border-left-width":t,"border-bottom-width":i})})}();
