@@ -1,7 +1,9 @@
+
+/*global $:false, skrollr:false */
 'use strict';
 (function() {
 
-    var s = skrollr.init({smoothScrolling:false, forceHeight: false});
+    skrollr.init({smoothScrolling: false, forceHeight: false});
 
     $('.filter').each(function() {
         var width = $(this).outerWidth();
