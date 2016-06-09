@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: 'Helvetica', arial, sans-serif;
+                color: #333;
+                background: #EEE;
+                margin-bottom: 60px;h
+            }
+            .blog {
+                display: inline-block;
+                width: 750px;
+                text-align: left;
+            }
+            .week {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='blog'>
+            <h3 class='week'>Week 1</h3>
+            <span>Feb 2 - 5</span>
+            <p>
+                I am starting off this independent study by creating a portfolio page. This page will be the first of several projects and will contain all of the other projects within it. The goal of this portfolio page will be to be visually appealing and easy to navigate. To create the website, I am using a scaffolding tool called Yeoman which initializes the project and allows me to use technologies like SASS to style the page.
+            </p>
+
+            <h3 class='week'>Week 2</h3>
+            <span>Feb 8 - 12</span>
+            <p>
+                At this stage, the portfolio is not finished, but I have decided to skip to one of the projects. I started working on recreating the game Minesweeper, and so far have just figured out how to make the basic grid for the project. I eventually settled on using the Jade templating engine for HTML to automatically create all of the tiles, which would have been unwieldy to create by hand.
+            </p>
+
+            <h3 class='week'>Week 3</h3>
+            <span>Feb 16 - 19</span>
+            <p>
+                This week, I focused on finishing up on my Minesweeper project, I spent a lot of time figuring out how to make the grid, and eventually settled on using the Jade templating engine. I got most of the functionality of the Minesweeper down but still have to work on making it look a lot nicer. I have settled on using material design icons from Google for the flag and bombs, and on using the the Roboto font for the numbers to be consistant with a theme. So far, you are able to uncover tiles and place flags like normal but there is no timer or restart button.
+            </p>
+
+            <h3 class='week'>Week 4</h3>
+            <span>Feb 22 - 26</span>
+            <p>
+                I spent most of this week finishing up the Minesweeper project. I finished up the styling to make it look cleaner and added a bar along the top to keep track of the time. One issue that I cannot seem to get rid of is that if user starts playing too quickly after they restart the board (like less than 1 second), the clock glitches out and goes at double time. Other than that, the game works perfectly.
+            </p>
+
+            <h3 class='week'>Week 5</h3>
+            <span>Feb 29 - Mar 4</span>
+            <p>
+                I spent a day refining my portfolio and adding the Minesweeper project to it. I also started on my third project which was Tictactics. I started playing this game pretty recently and I was inspired to make a web rendition of it. Unlike with Minesweeper, I created the grid with copy and paste since there were only 81 cells. I spent a lot of time playing around with color schemes and eventually settled on a lighter feeling, with a beige background and a grayish board. For the background, I also decided to use a subtle tiling background which is barely noticeable yet adds a feeling of complexity to the game. I also looked into adding some aspect of animation to this project and created a ripple effect whenever the user clicks on a tile. This was kind of tricky since I didn't want to use an existing library at the risk of making the page take to long to load, so used a simpler method which consisted of expanding a circle that starts where the user clicks to expand and fill the entire tile, which has overflow: hidden on it. Like with minesweeper, I decided to use the material design icons because they would be more refined than simply using the ltters 'X' and 'O'. With these, I also added a slight animation to add a more polished feeling to the game. However, I decided to start off with the design and finish up with the functionality later, so the game doesn't quite work yet.
+            </p>
+
+            <h3 class='week'>Week 6</h3>
+            <span>Mar 7 - 11</span>
+            <p>
+                With most of the designing already done from last week, I spent a lot of time this week adding to the functionality of the game. Since I had already recently written a console-based version of the game in Python already, I mostly just transcribed the logic over to Javascript so that it could run on a Website. Most of the logic was fairly straightforward, although I had spent a significant amount of time stuck on a bug wherein a player could not properly direct his or her opponent to the desired square. Eventually I sorted this issue out and the game started working as intended. I decided to add a 'share url' option so that two people could play each other when not on the same computer. But when playing against myself, I found it difficult to determine whose turn it was, so I added a banner across the background which indicated the current player's turn by color, where 'X' is red and 'O' is blue.
+            </p>
+
+            <h3 class='week'>Week 7</h3>
+            <span>Mar 14 - 16</span>
+            <p>
+                Since the portfolio was currently pretty basic at this stage, I spent the majority of this week refining it and making it look nicer. After going through several color schemes, I settled on a dark purple primary color with off-white and black components. I also decided to make the images for each project appear to 'float' alongside their descriptions. To accomplish this, I used a technique called parallax using Skrollr.js, which makes it so that as you scroll down the screen, the floating images scroll faster, making them appear to be three dimensionally higher than the rest of the content. I also added a slight glare to the images using a triangle filter div.
+            </p>
+
+            <h3 class='week'>Week 8</h3>
+            <span>Apr 5 - 8</span>
+            <p>
+                I recently discovered that the 'share url' feature of my tictactics does not really work proplery for the first couple of moves, so this is something to work on in the future. I also spent time coming up with my data visulization project, and eventually settled on making a website where people can see how well the can guess a single second. However, simply making the circle clock that I planned on using turned out to be harder than I thought it would be. I read up several online tutorials and finally figured out a method using a rectangle div that rotates around and another div that covers the part of the first div on the second half of the circle for the first half of the rotation around the circle, and then covers the second div on the first half of the circle for the second half of the rotation around the clock. The entire process was rather complicated but by the end of the week I got the basic functionality to work.
+            </p>
+
+            <h3 class='week'>Week 9</h3>
+            <span>Apr 11 - 14</span>
+            <p>
+                With the clock part of the the data visulization project done, I could now focus on the actual data visulization. The idea, which I added to my portfolio, was to have the user guess how long a second is for a total of thirty seconds, and then show them a histogram of their times, which ideally would be centered at around one second.  I started out trying to use an existing graphing library for Javascript, namely Chart.js, but found out that it was hard to adapt the library to my desired uses. I eventually settled on making my own charts from scratch, which worked out greatly. One item of contention was whether or not to have an absolute scale or a relative one based on what times the user actually inputted. For example, if the user consistantly guessed one second to be half a second, should the graph shift downwards to focus on the actual data, or should the graph remain centered at 1 second because that is what the ideal is. I eventually went with the latter option because it was easier to create.
+            </p>
+
+            <h3 class='week'>Week 10</h3>
+            <span>Apr 18 - 21</span>
+            <p>
+                I was gone for this entire week visiting colleges and could not spend any time working on my portfolio.
+            </p>
+
+            <h3 class='week'>Week 11</h3>
+            <span>Apr 25 - 29</span>
+            <p>
+                This week, I spent some more time finishing up my data visulization project. Specifically, I tuned up the design, adding in an animation effect whenver the user increments the time. This was done using a Javascript library called Mo.js, with which I added a ring and burst animation affect whenver the spacebar is pressed. I feel like this animation will keep the user engaged for at least slightly longer to gather more data to show thme. This week, I also added in standard deviation and mean data along the top of the histogram.
+            </p>
+
+            <h3 class='week'>Week 12</h3>
+            <span>May 2 - 6</span>
+            <p>
+                I spent a lot of this week trying to figure out what I was going to do for my data visulization project. I looked at sources of inspiration such as weavesilk.com and eventually settled on creating a random-walk like behavior that followed the user's mouse around. Unfortuantely, I only had enough time to scaffold out the project wiht Yeoman and create a basic canvas element.
+            </p>
+
+            <h3 class='week'>Week 13</h3>
+            <span>May 9 - 13</span>
+            <p>
+                This week, I spent a significant amount of time trying to figure out how a a random walk would be implemented, and then actually implementing it. One area of debate would be whether or not the horizontal component of the walk and the vertical component would be independent or not, i.e. whether or not the walk move diagonally. I decided on the latter because it would be much easier to implement. This worked great but one problem that I encountered was that, since I was using recursion to infinitely move the the line in a random direction, I kept on getting a stack overflow error. At first, I was able to circumvent this by adding a delay, i.e. timeout before each recursion, but this method was not ideal because it still used recursion for a task that was not being split up into smaller parts. I eventually switched to using a timer which I canceled when the user stopped holding down his or her mouse.
+            </p>
+
+            <h3 class='week'>Week 13</h3>
+            <span>May 16 - 20</span>
+            <p>
+                This week, the basic functionality of the the interactive art site was already done, but the results didn't look like much besides big white blobs, and it was hardly interactive since the only user input is where the random walk started. I addressed the first problem by making it so that the line paints a white color that is highly transparent (5% opacity to be specific), and this instantly solved the issue. Now, whenever the line crosses over itself again, the pixel at that crossover point becomes slightly darker, which has the effect of adding depth to the resulting painting. It is also interesting to see in which places the line crosses over more often. To address the second problem, I devised a method by which the line could more or less follow the user's mouse, while still remaining random. To accomplish this, I used a sigmoid function to determine the probability that the line should move in the direction of the user's mouse instead of in a random direction. I used the same method for both the horizontal and vertical directions, and after adjusting the constants to my liking, this worked out nicely as well. The line still moves freely and random while folloing the mouse quite closely. The only downside that I could think of is that when the user is holding the mouse still, the line tends to 'orbit' around the position, while with weavesilk.com, it move freely around.
+            </p>
+
+            <h3 class='week'>Week 14</h3>
+            <span>May 23 - 27</span>
+            <p>
+                I spent a lot of this week refining the random walk project, specifically by adding an option to choose colors in the corner and making the overall site look nicer by making it fill the screen and adding more contrast. I also revisited my Tictactics project and fixed up the bug that I spotted earlier.
+            </p>
+
+            <h3 class='week'>Week 15</h3>
+            <span>May 31 - Jun 3</span>
+            <p>
+                I spent this week adding to my portfolio. I polished up the posts for each of the individual projects and created a modal system to display the process by which I created them. I added special buttons below each description which lead to either the project itself the modal that explains the process.
+            </p>
+
+            <h3 class='week'>Week 15</h3>
+            <span>Jun 6 - Jun 9</span>
+            <p>
+                This week, I mostly polished up the portfolio page and published the data visulization project and portfolio to the Internet. I also spent time making the portfolio page more responsive, meaning that it can fit on multiple screen size. I did this mainly with the consideration that it would be displayed on an iPad, so did not optimize it for mobile phones. Also, I did not optimize any of the projects for mobile so the presentation will have to be based off of screenshots.
+            </p>
+        </div>
+    </body>
+</html>
